@@ -2,7 +2,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const cors = require("cors");
 const knex = require("knex");
-const bcrypt = require("bcrypt");
+const bcrypt = require("bcryptjs");
 require("dotenv").config();
 const nodemailer = require("nodemailer");
 const saltRounds = 5;
@@ -358,5 +358,5 @@ app.delete("/delete-user-task", authUser, (req, res) => {
 });
 
 app.listen(process.env.PORT || 3000, () => {
-  console.log("Server is live now");
+  console.log("APP IS RUNNING ON PORT");
 });
